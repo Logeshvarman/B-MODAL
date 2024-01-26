@@ -25,7 +25,7 @@ function PollHistory() {
   return (
     <div>
       <Head>
-        <title>Voting DAPP | Poll History</title>
+        <title>B-MODAL | Poll History</title>
       </Head>
       <Sidebar />
       <div className="lg:ml-80 ml-16 mr-2 mt-5 p-4 rounded">
