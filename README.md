@@ -5,13 +5,13 @@
 Clone the project
 
 ```bash
-  git clone https://github.com/jbrit/voting-dapp
+  git clone https://github.com/Logeshvarman/B-MODAL
 ```
 
 Go to the project directory
 
 ```bash
-  cd voting-dapp
+  cd B-MODAL
 ```
 
 Install dependencies
