@@ -1,13 +1,4 @@
-
-# Voting dAPP
-
-This is a Voting dApp built with [Next.js](https://nextjs.org/).
-
-Maintaining high-standard privacy and preventing vote tampering can be tough when developing voting apps, but incorporating Blockchain technology into an app can help you overcome these challenges.
-Voting D-APP is a Blockchain Voting Application that provides data integrity, data security, reduced fraud, and improved accountability when it comes to voting. This eliminates a single point of failure and protects personal information.
-
-You would need a metamask account to login successfully. Here is the link to the offical [documentation](https://docs.matic.network/docs/develop/metamask/hello/) to know how to set it up.
-
+# B-MODEL
 
 ## Run Locally
 
@@ -38,7 +29,7 @@ Compile the smart contract:
 Start the development server
 
 ```bash
-  yarn dev
+  npm run dev
 ```
 Open [http://localhost:3000](http://localhost:3000)
 
@@ -55,10 +46,11 @@ Open [http://localhost:3000](http://localhost:3000)
 
 ## Authors
 
-- [Ajibola Ojo](https://www.github.com/jbrit)
-- [Elijah Soladoye](https://www.github.com/showdow96)
-- [Iykee](https://github.com/iyke4life)
-- [Ibitola Mayowa](https://www.linkedin.com/in/ibitolamayowa/)
+- [Logesh Varman](https://github.com/Logeshvarman)
+- [Ravi Kiran](https://github.com/Ravi07kiran)
+- [Tushar](https://github.com/TusharChanolian)
+- [Sasidharan](https://github.com/Sasidharan0306)
+
 
 
 
