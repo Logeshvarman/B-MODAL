@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": " next dev --openssl-legacy-provider",
-    "build": "next build --openssl-legacy-provider",
-    "start": "next start --openssl-legacy-provider",
+    "dev": " next dev ",
+    "build": "next build",
+    "start": "next start ",
     "lint": "next lint",
     "test": "hardhat test",
     "deploy:test": "npx hardhat run scripts/deploy.js --network mumbai"
