@@ -59,7 +59,7 @@ function Sidebar() {
             <Link href="/">
               <a className="text-primary flex items-center font-bold">
                 <Image src={logo} width={80} height={80} />
-                Votechain
+                B-MODAL
               </a>
             </Link>
 
