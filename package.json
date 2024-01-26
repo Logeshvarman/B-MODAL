@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "SET NODE_OPTIONS=--openssl-legacy-provider && next dev",
-    "build": "npx hardhat compile && next build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "test": "hardhat test",
