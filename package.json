@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npx hardhat compile && next build",
+    "build": "next build --openssl-legacy-provider ",
     "start": "next start",
     "lint": "next lint",
     "test": "hardhat test",
