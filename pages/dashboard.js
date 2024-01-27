@@ -52,7 +52,7 @@ function Dashboard() {
   return (
     <div>
       <Head>
-        <title>B-MODAL | Dashboard</title>
+        <title>Voting DAPP | Dashboard</title>
       </Head>
       <Sidebar />
 

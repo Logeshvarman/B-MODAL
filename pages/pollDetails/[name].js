@@ -64,7 +64,7 @@ function PollDetails() {
   return (
     <div>
       <Head>
-        <title>B-MODAL | Dashboard</title>
+        <title>Voting DAPP | Dashboard</title>
       </Head>
       <Sidebar />
       <div className="lg:ml-80 ml-16 mr-2 mt-5 p-4 rounded">

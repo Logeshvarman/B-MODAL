@@ -62,4 +62,3 @@ npx hardhat node: to startup a local network and create dummy accounts
 in your metamask ext, switch to localhost 8484 and import one of the generated accounts using the secret keys
 use another terminal and run "npx hardhat run scripts/deploy.js --network localhost" to deploy contract to localhost
 -->
-

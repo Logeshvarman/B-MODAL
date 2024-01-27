@@ -88,7 +88,7 @@ function CreatePoll() {
   return (
     <div className="w-full">
       <Head>
-        <title>B-MODAL | Create a poll</title>
+        <title>Voting DAPP | Create a poll</title>
       </Head>
       <Sidebar />
 

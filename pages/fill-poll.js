@@ -76,7 +76,7 @@ function FillPoll() {
   return (
     <div>
       <Head>
-        <title>B-MODAL | Settings</title>
+        <title>Voting DAPP | Settings</title>
       </Head>
       <Sidebar />
       <div className="lg:ml-80 ml-16 mr-2 mt-5 p-4 rounded">
