@@ -1,7 +1,7 @@
 import { ethers } from "ethers";
 import { useContext } from "react";
 import Web3Modal from "web3modal";
-import Voting from "../artifacts/contracts/Voting.sol/Voting.json";
+import Voting from "../contracts/Voting.json";
 import { appDetailsContext } from "../context/AppDetails";
 
 const getUrl = (chainId) => {
