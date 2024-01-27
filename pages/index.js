@@ -5,12 +5,12 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Voting DAPP</title>
-        <meta name="description" content="Voting DAPP on Polygon" />
+        <title>B-MODAL</title>
+        <meta name="description" content="B-MODAL on Polygon" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="p-10">
-        Dummy Voting dApp Page <br />
+        Dummy B-MODAL Page <br />
         {routes.map((route, i) => (
           <Link key={i} href={route.path}><a className="block text-primary">{route.name}</a></Link>
         ))}

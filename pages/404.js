@@ -10,7 +10,7 @@ function Custom404() {
   return (
     <>
       <Head>
-        <title>Voting DAPP | Oops!</title>
+        <title>B-MODAL | Oops!</title>
       </Head>
       <div className="p-52 pt-32 flex justify-center text-center">
         <div className="card bg-white p-10 lg:p-20 rounded-md flex flex-col items-center">

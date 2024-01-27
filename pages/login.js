@@ -57,11 +57,11 @@ function Login() {
   return (
     <>
       <Head>
-        <title>Voting DAPP | Login</title>
+        <title>B-MODAL | Login</title>
       </Head>
       <div className="grid xl:grid-cols-2 gap-40 pt-24 px-32">
         <div className="pb-10 xl:px-10 mx-auto  pt-56">
-          <h1 className="text-4xl text-primary">Voting DAPP</h1>A platform that
+          <h1 className="text-4xl text-primary">B-MODAL</h1>A platform that
           gives you access to <br /> a secure polling system. Developed <br />{" "}
           using blockchain technology.
         </div>
