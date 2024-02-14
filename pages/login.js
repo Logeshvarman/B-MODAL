@@ -70,7 +70,7 @@ function Login() {
             <div className="card">
               <Image src={logo} width={150} height={150} alt="" />
               <h1 className="text-primary text-4xl">
-                <b>Votechain</b>
+                <b>B_MODAL</b>
               </h1>
               <div className="mt-10">
                 <label>Network: </label>
@@ -95,11 +95,10 @@ function Login() {
                     setSelectedNetwork(e.target.value);
                   }}
                 >
-                  <option value="" disabled hidden>
+                  <option value="BNB Chain" >
                     Select Network
                   </option>
-                  <option value={1666700000}>Harmony Testnet Shard 0</option>
-                  <option value={80001}>Matic Mumbai</option>
+                  <option value={97}>BNB Chain</option>
                 </select>
               </div>
               <Button className="my-4" onClick={handleClick}>
@@ -110,12 +109,7 @@ function Login() {
               {error && (
                 <div className="text-red-500 text-sm mb-10">{error}</div>
               )}
-              <p className="uppercase">
-                Login securely{" "}
-                <Link href="#">
-                  <a className="text-primary">Here</a>
-                </Link>
-              </p>
+
             </div>
           ) : (
             <div className="card flex flex-col justify-center items-center">

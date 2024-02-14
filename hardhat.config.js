@@ -16,7 +16,7 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 /**
  * @type import('hardhat/config').HardhatUserConfig
  */
-const privateKey = "31288194c1851a55a7b4d2c4128ee41d550e5a6b4f7022e6466c4df725706e12";
+const privateKey = "464c45108cab706032195be5a693fb6fa637302dcf06dcfd3b38141f62c0797f";
 module.exports = {
   solidity: "0.8.4",
   defaultNetwork: "hardhat",
@@ -24,8 +24,9 @@ module.exports = {
     hardhat: {
       chainId: 1337,
     },
-    harmonytestnet: {
-      url: `https://api.s0.b.hmny.io`,
+    tBNB: {
+      url: `https://data-seed-prebsc-1-s1.binance.org:8545`,
+      chainId:97,
       accounts: [privateKey]
     },
     mumbai: {
