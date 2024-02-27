@@ -21,4 +21,4 @@ This frontend interacts with the verifier server to
 - Request the QR code containing the DAORole query (zk request) for display
   - frontend fetch
   - backend getAuthQr
-  - backend birthday query
+  - backend DAORole query
