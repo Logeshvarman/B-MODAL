@@ -1,64 +1,79 @@
-# B-MODEL
+# This is a Verifiable Credential (VC) Gated Website
 
-## Run Locally
+- My hosted example website: https://birthday-gated-website.on.fleek.co/
+- In order to see the gated part of the website, you need a [KYCAgeCredential Verifiable Credential](https://www.notion.so/oceans404/How-to-get-a-KYCAgeCredential-Verifiable-Credential-f3d34e7c98ec4147b6b2fae79066c4f6?pvs=4) with a birthday after January 1, 2023, held in the Polygon ID Mobile wallet app.
 
-Clone the project
+<img width="1292" alt="Screenshot 2023-06-06 at 10 30 51 AM" src="https://github.com/oceans404/vc-gated-website/assets/91382964/53fe84f1-18ae-4050-9517-5e54ec1de982">
 
-```bash
-  git clone https://github.com/Logeshvarman/B-MODAL
-```
+## About
 
-Go to the project directory
+This is an opinionated template for creating VC gated dapps with
 
-```bash
-  cd B-MODAL
-```
+- frontend library: [React](https://react.dev/)
+- component library: [Chakra](https://chakra-ui.com/)
+- wallet connection libraries: [Rainbowkit](https://www.rainbowkit.com/) using WalletConnect v2, wagmi, & viem hooks
 
-Install dependencies
+## How to run locally
 
-```bash
-  yarn install
-```
+#### 0. Follow server setup instructions
 
-Compile the smart contract:
+Before starting the frontend, run the server by following [the server instructions](https://github.com/oceans404/fullstack-polygon-id-vc-gated-dapp/tree/main/server). You need the ngrok url from the server in order to start the frontend.
 
-```bash
-  npx hardhat compile
-```
+#### 1. Install frontend dependencies with --legacy-peer-deps
 
-Start the development server
+Make sure to run the install command with the --legacy-peer-deps flag.
 
 ```bash
-  npm run dev
+npm i --legacy-peer-deps
 ```
-Open [http://localhost:3000](http://localhost:3000)
 
+Unfortunately some of the dependencies are mid migration and use different legacy versions of typescript, so you need to run the command and all other dependency installations with the flag or you'll see installation errors. When installing any other dependencies in this project, use the flag.
 
-  ## Color Reference
+For example, here's how you could install react router:
 
-| Color             | Hex                                                                |
-| ----------------- | ------------------------------------------------------------------ |
-| Blue | ![#4263EB](https://via.placeholder.com/10/4263EB?text=+) #4263EB |
-| Purple | ![#7048E8](https://via.placeholder.com/10/7048E8?text=+) #7048E8 |
-| Pink | ![#F784AD](https://via.placeholder.com/10/F784AD?text=+) #F784AD |
-| Black | ![#212429](https://via.placeholder.com/10/212429?text=+) #212429 |
+```bash
+npm install react-router-dom --legacy-peer-deps
+```
 
+#### 2. Create a .env file by copying my sample
 
-## Authors
+```bash
+cp .env.sample .env;
+```
 
-- [Logesh Varman](https://github.com/Logeshvarman)
-- [Ravi Kiran](https://github.com/Ravi07kiran)
-- [Tushar](https://github.com/TusharChanolian)
-- [Sasidharan](https://github.com/Sasidharan0306)
+Update your .env with the REACT_APP_VERIFICATION_SERVER_PUBLIC_URL variable to your hosted server ngrok url. If you're hosting in production with render, use the render url for this variable.
 
+Visit https://cloud.walletconnect.com/ and create a new project (free and takes 2m). Update REACT_APP_WALLET_CONNECT_ID with the resulting Project ID.
 
+Update your .env with the REACT_APP_ALCHEMY_API_KEY_MUMBAI variable to your Alchemy API key for Polygon Mumbai.
 
+Quick check: Make sure you've updated these values in .env, not .env.sample 🤠
 
-  
-<!-- To run locally -->
-<!-- 
-npx hardhat test
-npx hardhat node: to startup a local network and create dummy accounts
-in your metamask ext, switch to localhost 8484 and import one of the generated accounts using the secret keys
-use another terminal and run "npx hardhat run scripts/deploy.js --network localhost" to deploy contract to localhost
--->
+#### 3. Start the frontend
+
+```bash
+npm start
+```
+
+Visit http://localhost:3000/
+
+#### 4. Optional: host your website using Fleek
+
+I've documented a similar hosting process here: https://github.com/oceans404/fullstack-sockets-demo#deploy-your-frontend
+
+## Logic flow
+
+This frontend interacts with the verifier server to
+
+- Watch for events emitted by socket for the user's specific sessionId
+  - frontend: https://github.com/oceans404/vc-gated-website/blob/main/src/PolygonIDVerifier.js#L48
+  - backend:
+    - getAuthQr in progress https://github.com/oceans404/vc-verifier/blob/main/index.js#L63
+    - getAuthQr done: https://github.com/oceans404/vc-verifier/blob/main/index.js#L86
+    - handleVerification in progress: https://github.com/oceans404/vc-verifier/blob/main/index.js#L100
+    - handleVerification done: https://github.com/oceans404/vc-verifier/blob/main/index.js#L135
+- Request the QR code containing the birthday query (zk request) for display
+  - frontend fetch: https://github.com/oceans404/vc-gated-website/blob/main/src/PolygonIDVerifier.js#L62
+  - backend getAuthQr: https://github.com/oceans404/vc-verifier/blob/main/index.js#L37
+  - backend birthday query: https://github.com/oceans404/vc-verifier/blob/main/proofRequest.js
+- Report verification result to the rest of the app: https://github.com/oceans404/vc-gated-website/blob/main/src/App.js#L39
