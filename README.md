@@ -12,7 +12,7 @@
 This frontend interacts with the verifier server to
 
 - Watch for events emitted by socket for the user's specific sessionId
-  - frontend: https://github.com/Logeshvarman/B-MODAL/blob/main/src/PolygonIDVerifier.js
+  - [Frontend](https://github.com/Logeshvarman/B-MODAL/blob/main/src/PolygonIDVerifier.js)
   - [Backend](https://github.com/Logeshvarman/vc-server/):
     - getAuthQr in progress
     - getAuthQr done
